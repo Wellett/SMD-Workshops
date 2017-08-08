@@ -76,7 +76,7 @@ public class SubjectClass implements SubjectInterface{
   public void updateState(){
     int previousState = state; //local variable to be discarded after update
     state++;
-    EventClass stateChange = new EventClass(state, previousState);
+    EventClass stateChange = new EventClass(state, previousState, this);
     notifyAll(stateChange);
   }
 }

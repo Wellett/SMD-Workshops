@@ -9,9 +9,11 @@ Description: Event Class to be used in the Observer Pattern
 public class EventClass{
   private Object state;
   private Object previousState;
+  private SubjectInterface subject;
 
   //Constructors
-  public EventClass(Object state, Object previousState){
+  public EventClass(Object state, Object previousState,
+    SubjectInterface subject){
     this.state =  state;
     this.previousState = previousState;
   }
@@ -27,5 +29,9 @@ public class EventClass{
 
   public Object getPreviousState(){
     return previousState;
+  }
+
+  public SubjectInterface getSubject(){
+    return subject;
   }
 }
