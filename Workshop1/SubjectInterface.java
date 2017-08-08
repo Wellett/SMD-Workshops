@@ -7,6 +7,6 @@ Description: Subject interface for the observer pattern
 */
 
 public interface SubjectInterface{
-  public void registerObserver(ObserverInterface observer);
+  public int registerObserver(ObserverInterface observer);
   public void derigisterObserver(ObserverInterface observer);
 }

@@ -6,6 +6,6 @@ Software Modelling and Design SWEN30006
 Description: Interface for a basic implementation of the Observer Pattern
 */
 public interface ObserverInterface{
-
   public void notify(EventClass event);
+  public int getObserverID();
 }
