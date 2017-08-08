@@ -65,4 +65,18 @@ public class SubjectClass implements SubjectInterface{
     numObservers--;
   }
 
+  //Notifies all subscribers of a state change
+  public void notifyAll(EventClass event){
+    for (int i = 0; i < numObservers; i++){
+      observers[i].notify(event);
+    }
+  }
+
+  //increment state and notify
+  public void updateState(){
+    int previousState = state; //local variable to be discarded after update
+    state++;
+    EventClass stateChange = new EventClass(state, previousState);
+    notifyAll(stateChange);
+  }
 }
