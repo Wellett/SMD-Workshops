@@ -10,7 +10,20 @@ public class Assessment{
   private Date dueDate;
   private int numSubmissions;
   private int maxSubmissions;
+  private File instructions;
 
-  
 
+  // Accessors
+  public Date getDueDate(){
+    return dueDate;
+  }
+
+  public File getInstructions(){
+    return instructions;
+  }
+
+  // Mutators
+  public void setInstructions(File instructions){
+    this.instructions = instructions;
+  }
 }
