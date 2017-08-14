@@ -7,6 +7,10 @@ Description: Assessment class for workshop 2 implementation
 */
 
 public class Assessment{
-  private Date dueDate; 
+  private Date dueDate;
+  private int numSubmissions;
+  private int maxSubmissions;
+
+  
 
 }

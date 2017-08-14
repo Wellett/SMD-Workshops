@@ -10,6 +10,7 @@ public class Instructor{
   private String name;
   private int staffID;
   private String position;
+  private String email;
 
   // Constructor
   public Instructor(String name, int staffID, String position){
@@ -29,6 +30,10 @@ public class Instructor{
 
   public String getPosition(){
     return position;
+  }
+
+  public String getEmail(){
+    return email;
   }
 
 }

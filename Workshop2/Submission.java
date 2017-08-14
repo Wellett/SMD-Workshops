@@ -12,7 +12,10 @@ public class Submission {
   private Date submissionDate;
   private int attempt;
   private File[] files;
+  private Student student;
+  private Assessment assessment;
 
+  
   public Submission(){
 
   }

@@ -32,4 +32,9 @@ public class Date{
     return year;
   }
 
+  public String toString(){
+    String str;
+    str = day + "/" + month + "/" + year;
+    return str;
+  }
 }
