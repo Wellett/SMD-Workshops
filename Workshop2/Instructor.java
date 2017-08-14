@@ -3,7 +3,7 @@ StudentID: 586703
 Last Modified: 14/8/2017
 Software Modelling and Design SWEN30006
 
-Description:
+Description: Instuctor class for workshop 2 implementation
 */
 
 public class Instructor{
