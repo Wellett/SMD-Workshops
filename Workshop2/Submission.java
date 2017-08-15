@@ -1,6 +1,6 @@
 /* Author: William Ellett
 StudentID: 586703
-Last Modified: 14/8/2017
+Last Modified: 15/8/2017
 Software Modelling and Design SWEN30006
 
 Modified Submission class for the workshop 2 implementation
@@ -15,17 +15,24 @@ public class Submission {
   private Student student;
   private Assessment assessment;
 
-  
-  public Submission(){
 
+  public Submission(File[] submissionFiles, Student student, Assessment
+    assessment){
+    this.files = submissionFiles;
+    this.student = student;
+    this.assessment = assessment;
   }
 
+  public Receipt generateReceipt(){
+    Receipt rcpt = new Receipt(attempt, submissionDate, student);
+    return rcpt;
+  }
 
-  // method from example
+  // method from example doesn't even work...
   public File[] generateFiles(){
       File[] files = new File[2];
-      files[0] = new File();
-      files[1] = new File();
+      files[0] = new File("file1.txt");
+      files[1] = new File("file2.txt");
       return files;
   }
 }

@@ -7,13 +7,14 @@ Description: receipt class for workshop 2 implementation
 */
 
 public class Receipt{
-  private Date submissisonDate;
+  private Date submissionDate;
   private int attempt;
   private String email;
 
-  public Receipt(int attempt, Date submissionDate){
+  public Receipt(int attempt, Date submissionDate, Student student){
     this.attempt = attempt;
     this.submissionDate = submissionDate;
+    this.email = student.getEmail();
   }
 
   public String toString(){

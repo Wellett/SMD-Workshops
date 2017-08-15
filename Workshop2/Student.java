@@ -12,7 +12,7 @@ public class Student{
   private String email;
 
   //Constructor
-  public Student(String name, int studentID){
+  public Student(String name, int studentID, String email){
     this.name = name;
     this.studentID = studentID;
   }
