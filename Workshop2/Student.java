@@ -10,6 +10,7 @@ public class Student{
   private String name;
   private int studentID;
   private String email;
+  private Receipt lastReceipt;
 
   //Constructor
   public Student(String name, int studentID, String email){
@@ -30,10 +31,17 @@ public class Student{
     return email;
   }
 
-  public makeSubmission(Assessment assesssment){
+  public void makeSubmission(Assessment assessment){
     int attempt = assessment.getSubmissionNumber();
     if (attempt != 0){
       Submission newSubmission = new Submission(this, assessment, attempt);
+      assessment.addSubmission(newSubmission);
+      lastReceipt = newSubmission.generateReceipt();
+    }
+    // Should really throw an exception but nah
+    else {
+      System.out.println("Submissions closed");
     }
   }
+
 }

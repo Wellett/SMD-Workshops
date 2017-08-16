@@ -19,7 +19,7 @@ public class Assessment{
     this.dueDate = dueDate;
     this.maxSubmissions = maxSubmissions;
     this.numSubmissions = 0;
-    this.Instructions;
+    this.instructions = instructions;
     this.submissions = new Submission[maxSubmissions];
   }
 
