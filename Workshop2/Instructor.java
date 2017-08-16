@@ -13,9 +13,10 @@ public class Instructor{
   private String email;
 
   // Constructor
-  public Instructor(String name, int staffID, String position){
+  public Instructor(String name, int staffID, String email, String position){
     this.name = name;
     this.staffID = staffID;
+    this.email = email;
     this.position = position;
   }
 

@@ -17,10 +17,17 @@ public class Submission {
 
 
   public Submission(File[] submissionFiles, Student student, Assessment
-    assessment){
+    assessment, int attempt){
     this.files = submissionFiles;
     this.student = student;
     this.assessment = assessment;
+    this.attempt = attempt;
+  }
+
+  public Submission(Student student, Assessment assessment, int attempt){
+    this.student = student;
+    this.assessment = assessment;
+    this.attempt = attempt;
   }
 
   public Receipt generateReceipt(){

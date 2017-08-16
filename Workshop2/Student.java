@@ -30,4 +30,10 @@ public class Student{
     return email;
   }
 
+  public makeSubmission(Assessment assesssment){
+    int attempt = assessment.getSubmissionNumber();
+    if (attempt != 0){
+      Submission newSubmission = new Submission(this, assessment, attempt);
+    }
+  }
 }
