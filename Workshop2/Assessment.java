@@ -1,6 +1,6 @@
 /* Author: William Ellett
 StudentID: 586703
-Last Modified: 15/8/2017
+Last Modified: 16/8/2017
 Software Modelling and Design SWEN30006
 
 Description: Assessment class for workshop 2 implementation
@@ -33,13 +33,13 @@ public class Assessment{
     return instructions;
   }
 
-  public int getSubmissionNumber(){
+  public int getSubmissionNumber(Date submissionDate){
     if (numSubmissions < maxSubmissions){
-      return numSubmissions + 1;
+      if (submissionDate.compareTo(dueDate) <=0){
+        return numSubmissions + 1;
+      }
     }
-    else {
-      return 0;
-    }
+    return 0;
   }
 
   // Mutators

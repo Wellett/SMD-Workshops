@@ -1,6 +1,6 @@
 /* Author: William Ellett
 StudentID: 586703
-Last Modified: 14/8/2017
+Last Modified: 16/8/2017
 Software Modelling and Design SWEN30006
 
 Description: Student Class for Workshop2 implementation
@@ -31,10 +31,15 @@ public class Student{
     return email;
   }
 
-  public void makeSubmission(Assessment assessment){
-    int attempt = assessment.getSubmissionNumber();
+  public void printLastReceipt(){
+    System.out.println(lastReceipt);
+  }
+
+  public void makeSubmission(Assessment assessment, Date submissionDate){
+    int attempt = assessment.getSubmissionNumber(submissionDate);
     if (attempt != 0){
-      Submission newSubmission = new Submission(this, assessment, attempt);
+      Submission newSubmission;
+      newSubmission = new Submission(this, assessment, attempt, submissionDate);
       assessment.addSubmission(newSubmission);
       lastReceipt = newSubmission.generateReceipt();
     }

@@ -1,6 +1,6 @@
 /* Author: William Ellett
 StudentID: 586703
-Last Modified: 15/8/2017
+Last Modified: 16/8/2017
 Software Modelling and Design SWEN30006
 
 Description: receipt class for workshop 2 implementation
@@ -19,8 +19,8 @@ public class Receipt{
 
   public String toString(){
     String str;
-    str = "Submission attmept " + attempt;
-    str += "made on " + submissionDate.toString();
+    str = "Receipt: Submission attmept " + attempt;
+    str += " made on " + submissionDate.toString();
     return str;
   }
 }
