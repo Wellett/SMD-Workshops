@@ -36,6 +36,7 @@ public class Submission {
   }
 
   // method from example doesn't even work...
+  // fixed, but still fairly trivial
   public File[] generateFiles(){
       File[] files = new File[2];
       files[0] = new File("file1.txt");

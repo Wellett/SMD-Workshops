@@ -5,6 +5,7 @@ Software Modelling and Design SWEN30006
 
 Description: Instuctor class for workshop 2 implementation
 */
+import java.io.File;
 
 public class Instructor{
   private String name;
@@ -35,6 +36,14 @@ public class Instructor{
 
   public String getEmail(){
     return email;
+  }
+
+  public Assessment createAssessment(Date dueDate, int maxSubmissions){
+    //generate instruction file
+    File instructions = new File("instructions.txt");
+    Assessment newAssess;
+    newAssess = new Assessment(dueDate, maxSubmissions, instructions);
+    return newAssess;
   }
 
 }

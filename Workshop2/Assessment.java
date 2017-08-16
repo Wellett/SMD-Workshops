@@ -5,6 +5,7 @@ Software Modelling and Design SWEN30006
 
 Description: Assessment class for workshop 2 implementation
 */
+import java.io.File;
 
 public class Assessment{
   private Date dueDate;
