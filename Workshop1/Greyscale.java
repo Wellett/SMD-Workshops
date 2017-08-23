@@ -10,7 +10,7 @@ Greyscale Effect
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
-public class Greyscale implements Effect{
+public class Greyscale implements Effect throws Exception{
   private int width;
   private int height;
 
@@ -33,8 +33,6 @@ public class Greyscale implements Effect{
         }
       }
       return img;
-    }
-    catch (Exception e){
     }
   }
 

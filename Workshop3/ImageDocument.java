@@ -8,6 +8,9 @@ ImageDocument class
 */
 
 import java.awt.image.BufferedImage;
+import java.io.*;
+import javaximageio.ImageIO;
+
 
 public class ImageDocument{
   public BufferedImage image;
@@ -19,16 +22,29 @@ public class ImageDocument{
     this.image = image;
   )
 
+  //apply Effect
   public boolean addTransform(Effect t){
-    return true;
+    try{
+      t.applyEffect(image);
+      return true;
+    }
+    catch (Exception e){
+      return false;
+    }
   }
 
+  //apply all Effects in array
   public boolean addTransformations(Effect[] trans){
+    for (int i = 0; i < trans.size(); i++){
+      addTransform(trans(i));
+    }
     return true;
   }
 
   public void renderImage(String outFile){
-    
+    outputFile = outFile;
+    File output = new File("outputFile");
+    ImageIO.write(image, "jpg", output);
   }
 
 }
