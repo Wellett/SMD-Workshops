@@ -12,22 +12,24 @@ public class EffectLibrary{
 
   //stub
   public boolean registerEffect(String name, Effect effect){
+    effects.put(name, effect);
     return true;
   }
 
   //stub
   public boolean deregisterEffect(String name){
+    effects.remove(name);
     return true;
   }
 
   //Accessors
   //stub
   public Effect getEffect(String name){
-    return something;
+    return effects.get(name);
   }
 
   public String[] availableEffects(){
-    return thingo;
+    return effects.keySet();
   }
 
 }
