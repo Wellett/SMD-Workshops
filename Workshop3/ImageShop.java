@@ -21,4 +21,5 @@ public class ImageShop{
   private void processImage(String image, Effect[] transforms){
 
   }
+
 }
