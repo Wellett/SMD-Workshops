@@ -8,5 +8,19 @@ Image Loader class
 */
 
 public class ImageLoader{
+  private String filename;
+
+  //Constructor
+  public ImageLoader(String file){
+    this.filename = file;
+  }
+
+  public ImageDocument loadImage(){
+
+  }
+
+  public void writeImage(Image img, String outputFile){
+    
+  }
 
 }

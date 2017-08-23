@@ -8,5 +8,26 @@ Effect Library class
 */
 
 public class EffectLibrary{
-  
+  private HashMap<String, Effect> effects;
+
+  //stub
+  public boolean registerEffect(String name, Effect effect){
+    return true;
+  }
+
+  //stub
+  public boolean deregisterEffect(String name){
+    return true;
+  }
+
+  //Accessors
+  //stub
+  public Effect getEffect(String name){
+    return something;
+  }
+
+  public String[] availableEffects(){
+    return thingo;
+  }
+
 }

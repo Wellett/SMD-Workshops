@@ -19,5 +19,16 @@ public class ImageDocument{
     this.image = image;
   )
 
+  public boolean addTransform(Effect t){
+    return true;
+  }
+
+  public boolean addTransformations(Effect[] trans){
+    return true;
+  }
+
+  public void renderImage(String outFile){
+    
+  }
 
 }
