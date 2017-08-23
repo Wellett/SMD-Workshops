@@ -43,7 +43,7 @@ public class ImageDocument{
 
   public void renderImage(String outFile){
     outputFile = outFile;
-    File output = new File("outputFile");
+    File output = new File(outputFile);
     ImageIO.write(image, "jpg", output);
   }
 
