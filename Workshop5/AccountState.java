@@ -8,5 +8,5 @@ Workshop 5 Implementation AccountState enum
 */
 
 public enum AccountState{
-
+  ACTIVE, INACTIVE, DEFAULT, PRIORITY, CLOSED, PENDING
 }

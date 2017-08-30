@@ -8,5 +8,13 @@ Workshop 5 Implementation Account Class
 */
 
 public class Account{
-  
+  private AccountState state;
+  private String name;
+
+  public Account(String name){
+    this.name = name;
+    AccountState = PENDING;
+  }
+
+
 }
