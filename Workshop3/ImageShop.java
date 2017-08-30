@@ -8,12 +8,24 @@ Image Shop program
 */
 
 public class ImageShop{
-  private ImageDocument image;
+  private ImageDocument imageDoc;
 
   public static void main(String args[]){
+    //initialize imageDoc
+    ImageLoader loader = new ImageLoader("string thing");
+    imageDoc = loader.loadImage();
+    //inititalize library
+    EffectLibrary library = new EffectLibrary();
+
+    imageDoc.addTransform(library.getEffect("Greyscale"));
+
+    loader.writeImage(imageDoc)
 
   }
 
+
+
+/*
   private Effect[] processTransforms(String args[]){
 
   }
@@ -21,5 +33,6 @@ public class ImageShop{
   private void processImage(String image, Effect[] transforms){
 
   }
+*/
 
 }

@@ -14,7 +14,7 @@ import javaximageio.ImageIO;
 
 public class ImageDocument{
   public BufferedImage image;
-  public Effect[] transforms;
+  public Effect transform;
   public String outputFile;
 
   //Constructor
@@ -42,9 +42,8 @@ public class ImageDocument{
   }
 
   public void renderImage(String outFile){
-    outputFile = outFile;
-    File output = new File(outputFile);
-    ImageIO.write(image, "jpg", output);
+    transform.applyEffect(image);
+
   }
 
 }

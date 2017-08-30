@@ -10,6 +10,11 @@ Effect Library class
 public class EffectLibrary{
   private HashMap<String, Effect> effects;
 
+  public EffectLibrary(){
+    effects = new HashMap();
+    effects.put("Greyscale", new Greyscale(););
+  }
+
   //stub
   public boolean registerEffect(String name, Effect effect){
     effects.put(name, effect);
