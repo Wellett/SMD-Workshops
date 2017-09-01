@@ -38,9 +38,6 @@ public class BillingAccounts{
 
     customerAcc.closeAccount();
     customerAcc.printState();
-
-
-
   }
 
 }
