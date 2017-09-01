@@ -1,6 +1,6 @@
 /* Author: Wiliam Ellett
 StudentID: 586703
-Last Modified: 30/8/2017
+Last Modified: 1/9/2017
 Software Modelling and Design SWEN30006
 
 Workshop 5 Implementation Account Class
@@ -20,7 +20,7 @@ public class Account{
   //state transitions
 
   //approval
-  public void approval(){
+  public void approve(){
     if ((state == AccountState.PENDING)||state == AccountState.CLOSED){
       state = AccountState.ACTIVE;
     }
