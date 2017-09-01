@@ -10,11 +10,9 @@ Workshop 5 Implementation Account Class
 public class Account{
 
   private AccountState state;
-  private String name;
 
 //Constructor
-  public Account(String name){
-    this.name = name;
+  public Account(){
     this.state = AccountState.PENDING;
   }
 
@@ -81,6 +79,9 @@ public class Account{
     }
   }
 
+  public void printState(){
+    System.out.println("Account is " + state.toString());
+  }
 
 
 }
