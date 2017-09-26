@@ -17,11 +17,12 @@ import java.io.IOException;
  *
  */
 public class MonopolyGame {
-	public static final String PROPERTIES_FILE = "monopoly.Properties";
+	private static final String PROPERTIES_FILE = "monopoly.Properties";
 	public final int ROUNDS_TOTAL;
 	public static final int MIN_NUM_OF_PLAYER = 2;
 	public static final int MAX_NUM_OF_PLAYER = 8;
 	public static final int NUM_OF_DICE = 2;
+	private static String dieType = "Die";
 
 	private List<Player> players;
 	private Board board = new Board();
@@ -30,8 +31,8 @@ public class MonopolyGame {
 	 * initialize the system with number of Players
 	 * @param numOfPlayers number of Players
 	 */
-	public MonopolyGame(int numOfPlayers, int numOfRounds){
-		Cup.initialize(NUM_OF_DICE);
+	public MonopolyGame(int numOfPlayers, int numOfRounds, String dieType){
+		Cup.initialize(NUM_OF_DICE, dieType);
 		players = new ArrayList<Player>(numOfPlayers);
 		ROUNDS_TOTAL = numOfRounds;
 		for(int i = 0; i < numOfPlayers;i++){
@@ -80,7 +81,14 @@ public class MonopolyGame {
 			System.exit(1);
 		}
 		int numberOfRounds = Integer.parseInt(monopolyProperties.getProperty("Number_of_Rounds"));
-		MonopolyGame game = new MonopolyGame(numberOfPlayers, numberOfRounds);
+
+		dieType = monopolyProperties.getProperty("Die_Type");
+
+		//Create/start game
+		MonopolyGame game = new MonopolyGame(numberOfPlayers, numberOfRounds, dieType);
 		game.playGame();
+
 	}
+
+	// private IDie initialiseDie
 }
