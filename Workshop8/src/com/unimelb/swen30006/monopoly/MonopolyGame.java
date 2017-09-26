@@ -10,21 +10,22 @@ import java.io.IOException;
 
 /**
  * This class is created based on case study of Monopoly of "Applying UML and Patterns, 3rd edition by Craig Larman".
- * For demonstration on subject SWEN30006 at The University of Melbourne 
+ * For demonstration on subject SWEN30006 at The University of Melbourne
  * @author 	Yunzhe(Alvin) Jia
  * @version 1.0
  * @since 	2016-07-18
  *
  */
 public class MonopolyGame {
+	public static final String PROPERTIES_FILE = "monopoly.Properties";
 	public final int ROUNDS_TOTAL;
 	public static final int MIN_NUM_OF_PLAYER = 2;
 	public static final int MAX_NUM_OF_PLAYER = 8;
 	public static final int NUM_OF_DICE = 2;
-	
+
 	private List<Player> players;
 	private Board board = new Board();
-	
+
 	/**
 	 * initialize the system with number of Players
 	 * @param numOfPlayers number of Players
@@ -39,7 +40,7 @@ public class MonopolyGame {
 			players.add(p);
 		}
 	}
-	
+
 	/**
 	 * start the game simulation
 	 */
@@ -48,28 +49,25 @@ public class MonopolyGame {
 			playRound();
 		}
 	}
-	
+
 	public List<Player> getPlayers(){
 		return players;
 	}
-	
+
 	private void playRound(){
 		for(Iterator<Player> it = players.iterator(); it.hasNext(); ){
 			Player player = (Player) it.next();
 			player.takeTurn();
 		}
 	}
-	
+
 	public static void main(String[] args) throws IOException {
 		Properties monopolyProperties = new Properties();
-		// Defaults
-		monopolyProperties.setProperty("Number_of_Players", "2");
-		monopolyProperties.setProperty("Number_of_Rounds", "20");
 
 		FileReader inStream = null;
-		
+
 		try {
-			inStream = new FileReader("monopolyProperties.txt");
+			inStream = new FileReader(PROPERTIES_FILE);
 			monopolyProperties.load(inStream);
 		} finally {
 			 if (inStream != null) {
