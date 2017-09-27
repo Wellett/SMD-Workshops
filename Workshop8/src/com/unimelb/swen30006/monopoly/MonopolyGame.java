@@ -21,7 +21,7 @@ public class MonopolyGame {
 	public final int ROUNDS_TOTAL;
 	public static final int MIN_NUM_OF_PLAYER = 2;
 	public static final int MAX_NUM_OF_PLAYER = 8;
-	public static final int NUM_OF_DICE = 2;
+	public static final int NUM_OF_DICE = 1;
 	private static String dieType = "Die";
 
 	private List<Player> players;
@@ -90,5 +90,4 @@ public class MonopolyGame {
 
 	}
 
-	// private IDie initialiseDie
 }

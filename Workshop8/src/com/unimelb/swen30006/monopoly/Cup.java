@@ -40,17 +40,18 @@ public class Cup {
 
 	private static void addDice(int numOfDice, String dieType){
 		dice = new ArrayList<IDie>(numOfDice);
+
 		for (int i = 0; i < numOfDice; i++ ){
-			switch(dieType){
+			switch(dieType) {
 				case "Die":
 					dice.add(new Die());
-					// break;
+					break;
 				case "FileDie":
 					dice.add(new FileDie());
-					// break;
+					break;
 				default:
 					dice.add(new Die());
-					// break;
+					break;
 			}
 		}
 	}
